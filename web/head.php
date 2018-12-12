@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Fabien Leite, Rémi Millerand">
     <meta name="description" content="Jean Mi Construction challenges by Fabien Leite & Rémi Millerand">
-    <title>Jean Mi Construction Rebirth</title>
+    <title>JeanMi Construction Rebirth</title>
 
     <link rel=" icon" type="image/png" href="/img/building_cloud.png"/>
 
@@ -28,7 +28,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="index.php#page-top">Start Bootstrap</a>
+      <a class="navbar-brand js-scroll-trigger" href="index.php#page-top">JeanMi Construction</a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>

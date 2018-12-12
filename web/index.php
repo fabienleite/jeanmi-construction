@@ -4,9 +4,9 @@
   <header class="masthead bg-primary text-white text-center">
       <div class="container">
         <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
-        <h1 class="text-uppercase mb-0">Start Bootstrap</h1>
+        <h1 class="text-uppercase mb-0">JeanMi Construction</h1>
         <hr class="star-light">
-        <h2 class="font-weight-light mb-0">Web Developer - Graphic Artist - User Experience Designer</h2>
+        <h2 class="font-weight-light mb-0">Your house, a different way</h2>
       </div>
     </header>
   <!-- Portfolio Grid Section -->
@@ -158,19 +158,22 @@
             <br>Clark, MO 65243</p>
         </div>
         <div class="col-md-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Customer access</h4>
+          <h4 class="text-uppercase mb-4">More informations</h4>
           <ul class="list-inline mb-0">
             <li class="list-inline-item">
-              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="login.php">
+              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
                 <i class="fas fa-long-arrow-alt-right"></i>
               </a>
             </li>
           </ul>
         </div>
         <div class="col-md-4">
-          <h4 class="text-uppercase mb-4">About Freelancer</h4>
-          <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
-            <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+          <h4 class="text-uppercase mb-4">About JeanMi Construction</h4>
+          <p class="lead mb-0">
+            Company created in 2017, JeanMi Construction is already the leader of cloud housing.
+            <br>
+            We think in the values of flexibility, empowerment and especially, we think that rich people deserve more than what they have.
+          </p>
         </div>
       </div>
     </div>
@@ -200,10 +203,15 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+            <h2 class="text-secondary text-uppercase mb-0">Mountain chalet</h2>
             <hr class="star-dark mb-5">
             <img class="img-fluid mb-5" src="img/portfolio/cabin.png" alt="">
-            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+            <p class="mb-5">
+              Amazing chalet for mountain housing, ideal for deployment in favorable counties (Switzerland, Liechtenstein, ...).
+              <br/>
+              It has been made for and with the collaboration of some of our clients that love moutain and live in different areas of the world. <br/> 
+              Some famous ones are Patrick and Isabelle B.
+            </p>
             <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
               <i class="fa fa-close"></i>
               Close Project</a>
@@ -222,10 +230,16 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+            <h2 class="text-secondary text-uppercase mb-0">Cake house</h2>
             <hr class="star-dark mb-5">
             <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="">
-            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+            <p class="mb-5">
+              A very particuliar house we are especially proud about. A special need from one of our french clients, a famous actor that lives in Russia (for personal reasons).
+              <br>
+              This one is not the typical one because it hasn't been made to be moved all year long to optimize your "life conditions", but instead is designed to be fixed in Russia. That has been a big challenge for us because it is near to classical construction.
+              <br>
+              Of course the special shape of it is a requirement for our client, and we have been the only ones to be able to meet this requirement.
+            </p>
             <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
               <i class="fa fa-close"></i>
               Close Project</a>
@@ -244,10 +258,13 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+            <h2 class="text-secondary text-uppercase mb-0">Clown house</h2>
             <hr class="star-dark mb-5">
             <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
-            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+            <p class="mb-5">
+              A house made especially for our humourists clients. <br/>
+              It has been designed with the help of Gad E. a very demanding client that helped us reach excellence.
+            </p>
             <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
               <i class="fa fa-close"></i>
               Close Project</a>
@@ -266,10 +283,16 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+            <h2 class="text-secondary text-uppercase mb-0">Entertaining you</h2>
             <hr class="star-dark mb-5">
             <img class="img-fluid mb-5" src="img/portfolio/game.png" alt="">
-            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+            <p class="mb-5">
+              When you subscribe to our offer, you do not just have a house. You have a fully equipped house.
+              <br/>
+              It includes entertainment. We have partnership with great companies to offer you the best of the best in terms of entertainment, immediately after you get your house.
+              <br/>
+              Some of our collaborators include well known Darc Morcel, Dahia Zehar, Lubrisoft...
+            </p>
             <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
               <i class="fa fa-close"></i>
               Close Project</a>
@@ -288,10 +311,17 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+            <h2 class="text-secondary text-uppercase mb-0">Keeping you safe</h2>
             <hr class="star-dark mb-5">
             <img class="img-fluid mb-5" src="img/portfolio/safe.png" alt="">
-            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+            <p class="mb-5">
+              Our offer to provide you the best and the most equipped house also includes securing your belongings.
+              <br/>
+              Of course, the model (cloud housing & on-demand deployment) is already interresting. 
+              But we also provide complements : ultra secured lock, top notch safe, anti-intrusion windows...
+              <br/>
+              This way you also can evade and avoid anyone that wants to steal your belongings.
+            </p>
             <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
               <i class="fa fa-close"></i>
               Close Project</a>
@@ -310,10 +340,14 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+            <h2 class="text-secondary text-uppercase mb-0">Helping your mobility</h2>
             <hr class="star-dark mb-5">
             <img class="img-fluid mb-5" src="img/portfolio/submarine.png" alt="">
-            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+            <p class="mb-5">
+              Your mobility and your flexibility are essential to us.
+              <br>
+              That's why we also plan on providing mobility solutions for your comfort. Upcomming 2020.
+            </p>
             <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
               <i class="fa fa-close"></i>
               Close Project</a>

@@ -11,3 +11,12 @@
 #login{
     margin-top: 2em;
 }
+
+.console{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 2px 6px;
+    margin-top: 2%;
+}

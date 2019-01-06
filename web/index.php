@@ -86,16 +86,16 @@
       <hr class="star-light mb-5">
       <div class="row">
         <div class="col-lg-4 ml-auto">
-          <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+          <p class="lead">JeanMiConstruction is a company created in 2017 by JeanMi himself. We already are the world leader of the cloud housing and are invovled in providing the best service to our premium clientele. We are eager to help you optimize your income with our smart housing solutions, that will help you in your everyday life by maximizing you capabilities. </p>
         </div>
         <div class="col-lg-4 mr-auto">
-          <p class="lead">Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+          <p class="lead">Choose your options and we handle everything. We created JeanMiConstruction with the idea that nothing was good enough for rich people. That's why we invented a service where you can design, build and deploy your house and your house location instantly from a smartphone application. This is possible with the power of cloud computing and makes us a very innovative partner for you. </p>
         </div>
       </div>
       <div class="text-center mt-4">
-        <a class="btn btn-xl btn-outline-light" href="#">
+        <a class="btn btn-xl btn-outline-light" href="https://www.impots.gouv.fr/portail/files/formulaires/2042/2018/2042_2338.pdf">
           <i class="fas fa-download mr-2"></i>
-          Download Now!
+          Download our brochure
         </a>
       </div>
     </div>
@@ -104,7 +104,7 @@
   <!-- Contact Section -->
   <section id="contact">
     <div class="container">
-      <h2 class="text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+      <h2 class="text-center text-uppercase text-secondary mb-0">Contact us</h2>
       <hr class="star-dark mb-5">
       <div class="row">
         <div class="col-lg-8 mx-auto">
@@ -154,8 +154,8 @@
       <div class="row">
         <div class="col-md-4 mb-5 mb-lg-0">
           <h4 class="text-uppercase mb-4">Location</h4>
-          <p class="lead mb-0">2215 John Daniel Drive
-            <br>Clark, MO 65243</p>
+          <p class="lead mb-0">Bundesplatz 3 
+            <br>3005 Bern, Schweiz</p>
         </div>
         <div class="col-md-4 mb-5 mb-lg-0">
           <h4 class="text-uppercase mb-4">More informations</h4>

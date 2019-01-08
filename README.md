@@ -24,7 +24,7 @@ $ ./setup.sh
 
 If the script doesn't work for you and you want to check if everything went correctly :
 
-To create the database you can use the SQL script with the relational database managament system of your choice. I personnaly like SQLite for this kind of cases because it's very easy to setup and here you don't need to write into the database for this challenge. You need to change the connection line in *login.php* if you want to use something else than SQLite.
+To create the database you can use the SQL script with the relational database managament system of your choice. I personnaly like SQLite for this kind of cases because it's very easy to setup and here you don't need to write into the database for this challenge. You need to change the connection line in *pdo_connection.php* if you want to use something else than SQLite.
 
 You can setup a SQLite database this way :
 

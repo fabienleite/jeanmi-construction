@@ -93,7 +93,7 @@
         </div>
       </div>
       <div class="text-center mt-4">
-        <a class="btn btn-xl btn-outline-light" href="https://www.impots.gouv.fr/portail/files/formulaires/2042/2018/2042_2338.pdf">
+        <a class="btn btn-xl btn-outline-light" href="https://www.impots.gouv.fr/portail/files/formulaires/2042/2018/2042_2338.pdf" alt="login.php">
           <i class="fas fa-download mr-2"></i>
           Download our brochure
         </a>
@@ -161,7 +161,7 @@
           <h4 class="text-uppercase mb-4">More informations</h4>
           <ul class="list-inline mb-0">
             <li class="list-inline-item">
-              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" alt="login.php">
                 <i class="fas fa-long-arrow-alt-right"></i>
               </a>
             </li>

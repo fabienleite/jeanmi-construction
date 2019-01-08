@@ -12,7 +12,6 @@ foreach ($users as $key => $user) {
   $usernames[] = $user[0];
 }
 
-var_dump($_POST);
 if(!$_POST['token']) {
     die(0);
 } 
@@ -34,6 +33,9 @@ $decoded_token["data"] = (array) $decoded_token["data"];
 
     <div style="margin-top: 5%"> Potential income :</div>
     <canvas id="pot-income" width="60%" height="20%"></canvas>
+
+    <div style="margin-top: 5%"> Secret :</div>
+    <canvas id="secret" width="60%" height="20%"></canvas>
   </div>
 
 <?php 
@@ -108,6 +110,24 @@ var myLineChart = new Chart(ctx2, {
     }]
   }
 });
+
+
+var ctx3 = document.getElementById("secret").getContext('2d');
+var myLineChart = new Chart(ctx3, {
+  type: 'line',
+  data: {
+    labels: ["17 days ago", "16 days ago", "15 days ago", "14 days ago", "13 days ago", "12 days ago", "11 days ago", "10 days ago", "9 days ago", "8 days ago", "7 days ago", "6 days ago", "5 days ago", "4 days ago", "3 days ago", "2 days ago", "Yesterday", "Today"],
+    datasets: [{
+        label: 'Secret',
+        data: [106, 101, 097, 110, 109, 105, 099, 111, 110, 115, 116, 114, 117, 099, 116, 105, 111, 110],
+        backgroundColor: 'rgba(54, 162, 235, 1)',
+        borderColor: 'rgba(255, 255, 255, 1)'
+
+    }]
+  }
+});
+
+[106, 101, 097, 110, 109, 105, 099, 111, 110, 115, 116, 114, 117, 099, 116, 105, 111, 110]
 </script>
 
 

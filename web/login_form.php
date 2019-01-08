@@ -1,6 +1,6 @@
 <section id="login">
     <div class="container">
-      <h3 class="text-center text-uppercase"> Connect to access admin pannel </h3>
+      <h3 class="text-center text-uppercase"> Connect to access admin panel </h3>
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <form name="credentials" method="POST" action="login.php">

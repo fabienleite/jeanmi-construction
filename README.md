@@ -170,11 +170,11 @@ Well played, you have access to the second flag and the third part of the challe
 
 ### Step 3
 
-Not a real step because it's super easy and you don't get the flag, you just have to exploit a command injection that trusts the user to access the system part of the challenge:
+It's a super easy step with web and just a cat, you have to exploit a command injection that trusts the user to access the system part of the challenge:
 
 Just change the command in the code of the form and you're ready to do commands on the machine. 
 
-There is absolutely no security or hardening for the command on the web part. If something is not possible, it is probably blocked by the machine.
+There is absolutely no security or hardening for the command on the web part, pretty much nothing is done either on the server part.
 
 <img src="screenshots/screenshot_step3.png" width="700em" style="margin-left: auto; margin-right: auto;">
 

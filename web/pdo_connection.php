@@ -6,6 +6,6 @@ try{
 }
 catch(PDOException $e) {
     $msg = 'Error while accessing database. Please warn challenge organisation.';
-    die($msg);
+    die($e->getMessage());
     exit();
 }

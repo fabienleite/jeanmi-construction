@@ -8,8 +8,8 @@ A little scenario with a few web & system challenges created for the FIC 2019.
 
 Make sure you have :
 
-* SQLite3 installed (or any RDBMS if you choose manual way but I recommand you the automated way)
-* PHP >= 7.1 (might run on older versions but I'm not sure so install 7.1 or newer)
+* SQLite3 installed (or any RDBMS if you choose manual way but I recommend you the automated way)
+* PHP >= 7.1 (might run on older versions but I'm not sure you should install 7.1 or newer)
 * A securely configured web application server (i.e. Apache2 for exemple)
 
 ### Automated 
@@ -37,7 +37,7 @@ sqlite> SELECT * FROM Users ;
 2|jeanmithebest|597f579d31603f69a07c6405f89e42c487553c9267e518339f325b4200f8efc7
 ```
 
-*Do **not** use SHA256 to hash passwords, this is a challenge, not a good example*.
+*Do **not** use SHA256 to hash passwords, this is a challenge, not a good example (you should use PBKDF2, Bcrypt, Scrypt, ...)*.
 
 Then, change the rights on the database file you just created :
 
@@ -58,7 +58,8 @@ The web part of the challenge consists in :
 
 1. **Finding a way to access the administrator pannel (as admin)**. To do so, you have to exploit an SQL injection that is not shown on the page. You have to go to /login.php and process your SQLi. That's very basic and classical, yet, it is often presented with unashed password. I chosed on this one to present it with SHA-256 hashed passowrd and a SELECT COUNT() request. I actually did see it coded like that already on web apps. This illustrates a common situation for OWASP Top 10 2017 - A1.
 2. **Finding a way to elevate your priveleges and become the super admin (basically, just become jeanmi).** You have to change your [JWT](https://jwt.io/) token to gain privileges. It's a bit harder because you have to know JWT. Those tokens are sometimes used to replace session and do session management tasks in a "stateless" way. Here it is mixed with a very bad crypto because the secrect is a key you can bruteforce or find. This illustrates an uncommon but still very credible situation for OWASP Top 10 2017 - A2.
-
+3. **Finding a password that JeanMi let while connected on the server.** You just have to exploit the command injection that is already on the server and eventually set up a reverse shell.
+4. **Finding informations thet JeanMi let *as root* on the server.** To de so, you need to become root yourself.
 
 ## Challenge solution
 

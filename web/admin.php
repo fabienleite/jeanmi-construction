@@ -119,18 +119,18 @@ var myLineChart = new Chart(ctx3, {
     labels: ["17 days ago", "16 days ago", "15 days ago", "14 days ago", "13 days ago", "12 days ago", "11 days ago", "10 days ago", "9 days ago", "8 days ago", "7 days ago", "6 days ago", "5 days ago", "4 days ago", "3 days ago", "2 days ago", "Yesterday", "Today"],
     datasets: [{
         label: 'Secret',
-        data: [106, 101, 097, 110, 109, 105, 099, 111, 110, 115, 116, 114, 117, 099, 116, 105, 111, 110],
+        data: [106, 101, 97, 110, 109, 105, 99, 111, 110, 115, 116, 114, 117, 99, 116, 105, 111, 110],
         backgroundColor: 'rgba(54, 162, 235, 1)',
         borderColor: 'rgba(255, 255, 255, 1)'
 
     }]
   }
 });
-
-[106, 101, 097, 110, 109, 105, 099, 111, 110, 115, 116, 114, 117, 099, 116, 105, 111, 110]
 </script>
 
-
+<?php 
+if(in_array($decoded_token["data"]["username"], $usernames) && $decoded_token["data"]["is_jeanmi_the_god"] == "true"){
+?>
 <script>
 function sendCommand(){
     const req = new XMLHttpRequest();
@@ -150,6 +150,8 @@ function sendCommand(){
     );
 }
 </script>
-
+<?php
+}
+?>
 
 <?php include('foot.php'); ?>

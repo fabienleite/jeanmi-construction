@@ -1,6 +1,6 @@
 # JeanMi Construction
 
-A little scenario with a few web & system challenges created for the FIC 2019.
+A little scenario with a few web & system challenges created for the [Norzh CTF](https://twitter.com/NorzhCTF) @ FIC 2019.
 
 ## Setup
 
@@ -16,7 +16,7 @@ Make sure you have :
 
 Just run the bash script and you are ready to go :
 
-```
+```sh
 $ ./setup.sh
 ```
 
@@ -24,11 +24,13 @@ $ ./setup.sh
 
 If the script doesn't work for you and you want to check if everything went correctly :
 
-To create the database you can use the SQL script with the relational database managament system of your choice. I personnaly like SQLite for this kind of cases because it's very easy to setup and here you don't need to write into the database for this challenge. You need to change the connection line in *pdo_connection.php* if you want to use something else than SQLite.
+To create the database you can use the SQL script with the relational database managament system of your choice.
+I personnaly like SQLite for this kind of cases because it's very easy to setup and here you don't need to write into the database for this challenge.
+You need to change the connection line in *pdo_connection.php* if you want to use something else than SQLite.
 
 You can setup a SQLite database this way :
 
-```
+```sh
 $ sqlite3 ./web/jeanmi-construction.db < generate-databse.sql
 SQLite version 3.24.0 2018-06-04 14:10:15
 Enter ".help" for usage hints.
@@ -41,7 +43,7 @@ sqlite> SELECT * FROM Users ;
 
 Then, change the rights on the database file you just created :
 
-```
+```sh
 $ chmod 755 ./web/jeanmi-construction.db 
 ```
 
@@ -56,25 +58,42 @@ Users are as following :
 
 The web part of the challenge consists in :
 
-1. **Finding a way to access the administrator pannel (as admin)**. To do so, you have to exploit an SQL injection that is not shown on the page. You have to go to /login.php and process your SQLi. That's very basic and classical, yet, it is often presented with unashed password. I chosed on this one to present it with SHA-256 hashed passowrd and a SELECT COUNT() request. I actually did see it coded like that already on web apps. This illustrates a common situation for OWASP Top 10 2017 - A1.
-2. **Finding a way to elevate your priveleges and become the super admin (basically, just become jeanmi).** You have to change your [JWT](https://jwt.io/) token to gain privileges. It's a bit harder because you have to know JWT. Those tokens are sometimes used to replace session and do session management tasks in a "stateless" way. Here it is mixed with a very bad crypto because the secrect is a key you can bruteforce or find. This illustrates an uncommon but still very credible situation for OWASP Top 10 2017 - A2.
-3. **Finding a password that JeanMi let while connected on the server.** You just have to exploit the command injection that is already on the server and eventually set up a reverse shell.
-4. **Finding informations thet JeanMi let *as root* on the server.** To de so, you need to become root yourself.
+1. **Finding a way to access the administrator pannel (as admin)**.   
+    To do so, you have to exploit an SQL injection that is not shown on the page. 
+    You have to go to /login.php (findable with *dirbuster*) and process your SQLi.
+    That's very basic and classical, yet, it is often presented with unashed password.
+    I chosed on this one to present it with SHA-256 hashed passowrd and a SELECT COUNT() request.
+    I actually did see it coded like that already on web apps.
+    This illustrates a common situation for OWASP Top 10 2017 - A1.
+2. **Finding a way to elevate your priveleges and become the super admin (basically, just become jeanmi).**   
+    You have to change your [JWT](https://jwt.io/) token to gain privileges. 
+    It's a bit harder because you have to know JWT. 
+    Those tokens are sometimes used to replace session and do session management tasks in a "stateless" way.
+    Here it is mixed with a very bad crypto because the secrect is a key you can bruteforce or find.
+    This illustrates an uncommon but still very credible situation for OWASP Top 10 2017 - A2.
+3. **Finding a password that JeanMi let while connected on the server.**  
+    You just have to exploit the command injection that is already on the server and eventually set up a reverse shell.
+    That's probably the easiest part of the challenge, just see the hidden input and you're good to go.
+    That's one of the most basic situation for OWASP Top 10 2017 - A1, hopefully you won't see it in a professional environment.
+4. **Finding informations thet JeanMi let *as root* on the server.**   
+    To de so, you need to become root yourself.
 
 ## Challenge solution
 
 ### Step 1
 
-The login page is not shown. However it's super easy to find, just go to login.php and you're ready to go. It's also shown on a few alt attributes on the page.
+The login page is not shown. However it's super easy to find, just go to login.php and you're ready to go.
+It's also shown on a few alt attributes on the page.
+*dirbuster* finds it pretty fast.
 
 This is a SQLInjection. SQL request is (in pseudo-code):
 
-```
+```sql
 SELECT COUNT(*) FROM Users WHERE username='?' AND passwd=sha256hash('?')
 ```
 
 People that creates SQL requests this way think they are protected because of the structure of the SQL request. 
-Actually, if you have a username, that one is ultra easy to bypass. 
+Actually, if you have a username (and of course you have), that one is ultra easy to bypass. 
 
 Just type this in username field:
 
@@ -89,7 +108,8 @@ admin' --
 
 You can find the JWT in local storage. 
 
-You lack the secret to decode this JWT. It is actually ASCII encoded in the last chart of the page (the blue one). When you decode the ascii, you can find that the key is "jeanmiconstruction" :
+You lack the secret to decode this JWT. It is guessable but it is actually also ASCII encoded in the last chart of the page (the blue one).
+When you decode the ascii, you can find that the key is "jeanmiconstruction" :
 
 <img src="screenshots/screenshot_step2.png" width="700em" style="margin-left: auto; margin-right: auto;">
 
@@ -180,6 +200,17 @@ There is absolutely no security or hardening for the command on the web part, pr
 <img src="screenshots/screenshot_step3.png" width="700em" style="margin-left: auto; margin-right: auto;">
 
 
+## License
+
+This tool is licensed under a pretty uncomon license which is [CeCILL B](http://www.cecill.info/licences.en.html). 
+It is a french license, extremely similar to BSD or Apache but more adapted to french law. 
+I recommend you to read it but if you want a shortcut, just treat it the same way you usually do with an Apache license.
+
+To quote the creators of the license : 
+
+>   CeCILL-B follows the principle of the popular BSD license and its variants (Apache, X11 or W3C among others).
+    In exchange for strong citation obligations (in all software incorporating a program covered by CeCILL-B and also through a Web site), the author authorizes the reuse of its software without any other constraints. 
+
 ## Creators
 
-[Fabien Leite](https://www.github.com/fabienleite) & [Rémi Millerand (Driikolu)](https://driikolu.fr)
+JeanMi Construction is a team work of [Fabien Leite](https://www.github.com/fabienleite) & [Rémi Millerand (Driikolu)](https://driikolu.fr).

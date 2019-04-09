@@ -2,27 +2,25 @@
 
 A little scenario with a few web & system challenges created for the [Norzh CTF](https://twitter.com/NorzhCTF) @ FIC 2019.
 
+It has been created to work with a clean **Debian** VM.
+
 ## Setup
-
-### Requirements
-
-Make sure you have :
-
-* SQLite3 installed (or any RDBMS if you choose manual way but I recommend you the automated way)
-* PHP >= 7.1 (might run on older versions but I'm not sure you should install 7.1 or newer)
-* A securely configured web application server (i.e. Apache2 for exemple)
 
 ### Automated 
 
-Just run the bash script and you are ready to go :
+Just run the bash script and you should be ready to go :
 
 ```sh
 $ ./setup.sh
 ```
 
-### Manual
+### Web part - Manual
 
-If the script doesn't work for you and you want to check if everything went correctly :
+If : 
+- You want to setup only chall 1 & 2
+- the script doesn't work for you and you want to check if everything went correctly for the web part
+
+Then :
 
 To create the database you can use the SQL script with the relational database managament system of your choice.
 I personnaly like SQLite for this kind of cases because it's very easy to setup and here you don't need to write into the database for this challenge.
@@ -56,27 +54,28 @@ Users are as following :
 
 ## Goal
 
-The web part of the challenge consists in :
+The challenge consists in :
 
-1. **Finding a way to access the administrator pannel (as admin)**.   
+1. **Finding a way to access the administrator pannel (as admin).** _(Web)_  
     To do so, you have to exploit an SQL injection that is not shown on the page. 
     You have to go to /login.php (findable with *dirbuster*) and process your SQLi.
     That's very basic and classical, yet, it is often presented with unashed password.
     I chosed on this one to present it with SHA-256 hashed passowrd and a SELECT COUNT() request.
     I actually did see it coded like that already on web apps.
     This illustrates a common situation for OWASP Top 10 2017 - A1.
-2. **Finding a way to elevate your priveleges and become the super admin (basically, just become jeanmi).**   
+2. **Finding a way to elevate your priveleges and become the super admin (basically, just become jeanmi).** _(Web)_  
     You have to change your [JWT](https://jwt.io/) token to gain privileges. 
     It's a bit harder because you have to know JWT. 
     Those tokens are sometimes used to replace session and do session management tasks in a "stateless" way.
     Here it is mixed with a very bad crypto because the secrect is a key you can bruteforce or find.
     This illustrates an uncommon but still very credible situation for OWASP Top 10 2017 - A2.
-3. **Finding a password that JeanMi let while connected on the server.**  
+3. **Finding a password that JeanMi let while connected on the server.** _(Web / Basic System)_   
     You just have to exploit the command injection that is already on the server and eventually set up a reverse shell.
     That's probably the easiest part of the challenge, just see the hidden input and you're good to go.
     That's one of the most basic situation for OWASP Top 10 2017 - A1, hopefully you won't see it in a professional environment.
-4. **Finding informations thet JeanMi let *as root* on the server.**   
+4. **Finding informations thet JeanMi let *as root* on the server.** _(System)_   
     To de so, you need to become root yourself.
+    You have to use Wireshark X-Forwarding and a lua script to do so.
 
 ## Challenge solution
 
@@ -199,6 +198,16 @@ There is absolutely no security or hardening for the command on the web part, pr
 
 <img src="screenshots/screenshot_step3.png" width="700em" style="margin-left: auto; margin-right: auto;">
 
+Flag is in ```/home/jeanmi/flag```.
+
+Just run a cat on the file and you have everything you need :
+```sh
+$ cat /home/jeanmi/flag
+```
+
+### Step 4
+
+> WIP
 
 ## License
 
@@ -213,4 +222,4 @@ To quote the creators of the license :
 
 ## Creators
 
-JeanMi Construction is a team work of [Fabien Leite](https://www.github.com/fabienleite) & [Rémi Millerand (Driikolu)](https://driikolu.fr).
+JeanMi Construction is a team work of [Fabien Leite](https://www.github.com/fabienleite) (web part : chall 1 to 3) & [Rémi Millerand (Driikolu)](https://driikolu.fr) (system part : chall 3 to 4 and setup).

